@@ -1,0 +1,40 @@
+@url = http://localhost:3000/filmes
+
+### Listar todos os filmes
+GET {{url}}
+
+### Buscar filme por ID (exemplo ID 1)
+GET {{url}}/1
+
+### Criar novo filme
+POST {{url}}
+Content-Type: application/json
+
+{
+  "titulo": "Filme1",
+  "diretor": "Pedro",
+  "ano": 1990,
+  "assistido": false
+}
+
+### Atualizar filme (parcial) - ID 2
+PUT {{url}}/2
+Content-Type: application/json
+
+{
+  "assistido": true
+}
+
+### Atualizar filme (todos os campos) - ID 1
+PUT {{url}}/1
+Content-Type: application/json
+
+{
+  "titulo": "Filme2",
+  "diretor": "Felipe",
+  "ano": 1982,
+  "assistido": true
+}
+
+### Deletar filme - ID 2
+DELETE {{url}}/2
