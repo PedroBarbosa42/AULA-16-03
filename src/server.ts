@@ -11,4 +11,3 @@ app.use("/tarefas", tarefasRoutes);
 app.listen(PORT, () => {
     console.log(`Servidor executando em localhost:${PORT}`);
 });
-
